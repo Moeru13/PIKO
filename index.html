@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penilaian & Histogram</title>
+
+    <!-- Link ke CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>KELOMPOK 4A</h2>
+
+        <label>Nama Penilai</label>
+        <input type="text" id="nama" placeholder="Masukkan nama Anda">
+
+        <label>Kenyamanan (1–5)</label>
+        <select id="kenyamanan"></select>
+
+        <label>Keragaman (1–5)</label>
+        <select id="kebersihan"></select>
+
+        <label>Kualitas (1–5)</label>
+        <select id="pelayanan"></select>
+
+        <button id="btnSubmit">Tambah Penilaian</button>
+        <button id="btnLoadCSV">Muat data csv</button>
+
+        <hr />
+
+        <h2>Daftar Penilaian</h2>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Kenyamanan</th>
+                    <th>Keragaman</th>
+                    <th>Kualitas</th>
+                    <th>Hapus</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <hr />
+
+        <h2>Histogram Penilaian</h2>
+        <canvas id="histChart"></canvas>
+    </div>
+
+    <!-- Link ke JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
