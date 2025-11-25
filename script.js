@@ -7,7 +7,7 @@ let dataList = [];
 // Mengisi Select (1–5)
 // ============================
 function loadSelectOptions() {
-    const selects = ["kenyamanan", "kebersihan", "pelayanan"];
+    const selects = ["kenyamanan", "keragaman", "kualitas"];
 
     selects.forEach(id => {
         const select = document.getElementById(id);
@@ -33,8 +33,8 @@ function renderTable() {
             <td>${index + 1}</td>
             <td>${row.nama}</td>
             <td>${row.kenyamanan}</td>
-            <td>${row.kebersihan}</td>
-            <td>${row.pelayanan}</td>
+            <td>${row.keragaman}</td>
+            <td>${row.kualitas}</td>
             <td>
                 <button onclick="deleteData(${index})" style="background:#d9534f">Hapus</button>
             </td>
@@ -51,15 +51,15 @@ function renderTable() {
 function addData() {
     const nama = document.getElementById("nama").value.trim();
     const k1 = parseInt(document.getElementById("kenyamanan").value);
-    const k2 = parseInt(document.getElementById("kebersihan").value);
-    const k3 = parseInt(document.getElementById("pelayanan").value);
+    const k2 = parseInt(document.getElementById("keragaman").value);
+    const k3 = parseInt(document.getElementById("kualitas").value);
 
     if (nama === "") {
         alert("Nama tidak boleh kosong!");
         return;
     }
 
-    dataList.push({ nama: nama, kenyamanan: k1, kebersihan: k2, pelayanan: k3 });
+    dataList.push({ nama: nama, kenyamanan: k1, keragaman: k2, kualitas: k3 });
     renderTable();
 
     // Reset input agar rapi
@@ -98,8 +98,8 @@ function loadCSV() {
                 dataList.push({
                     nama: cols[0],
                     kenyamanan: parseInt(cols[1]),
-                    kebersihan: parseInt(cols[2]),
-                    pelayanan: parseInt(cols[3])
+                    keragaman: parseInt(cols[2]),
+                    kualitas: parseInt(cols[3])
                 });
             }
 
