@@ -154,7 +154,7 @@ function initChart() {
 function updateChart() {
     if (!chart) return;
 
-    const aspek = ["kenyamanan", "kebersihan", "pelayanan"];
+    const aspek = ["kenyamanan", "keragaman", "kualitas"];
 
     aspek.forEach((a, idx) => {
         const counts = [0, 0, 0, 0, 0];
